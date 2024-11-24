@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spelling Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      
+      <div class="top-wrapper">
+      <div class="question-no-container"></div>
+      <div id="user-input-section-chances"></div>
+      
+      <div class="hint-ref"></div>
+      <div class="speak-buttons-container">
+        <button class="speak" id="speak-word-button">
+          <ion-icon class="icon" name="play-circle-outline"></ion-icon
+          >&nbsp;<span>Say word</span>
+        </button>
+        <button class="speak" id="speak-definition-button">
+          <ion-icon class="icon" name="play-circle-outline"></ion-icon
+          >&nbsp;<span>Say definition</span>
+        </button>
+      </div>
+    </div>
+      <div id="user-input-section-word"></div>
+      <div id="message"></div>
+      <div id="letter-container"></div>
+    </div>
+  
+    <div class="controls-container active">
+      <div id="result"></div>
+      <div id="word"></div>
+      <button id="start">Start</button>
+
+    </div>
+    <div class="voice-selection">
+      Select Voice:
+      <select id="voiceList"></select>
+      <br /><br />
+    </div>
+    
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

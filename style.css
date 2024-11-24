@@ -1,0 +1,268 @@
+:root {
+    --primary-color: #0d7947;
+    --correct: #008000;
+    --incorrect: #8a8686;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    /* border: 1px solid red; */
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    height: auto;
+  }
+  
+  .wrapper {
+    width: 98%;
+    max-width: 40rem;
+    background-color: #fff;
+    padding: 1em;
+    text-align: center;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem auto;
+  }
+  
+  .top-wrapper {
+    width: 90%;
+    max-width: 40em;
+    margin: 0 auto;
+  }
+  
+  .controls-container.active{
+    height: 120vh;
+    z-index: 100;
+  }
+
+  .controls-container {
+    display: hide;
+    background-color: var(--primary-color);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+  }
+  
+
+  #start,
+  .speak {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+  
+  #start {
+    border: none;
+    margin-top: 1em;
+    padding: 1em 3em;
+  }
+  
+  .speak {
+    border: 1px solid black;
+  }
+  
+  .speak-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .speak {
+    padding: 0.2em 0.8em;
+    flex: 1 1 150px;
+    width: 100px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+ 
+  }
+  
+  .speak > span {
+    width: 80px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .icon = play button icon in "replay the word button */
+  .icon {
+    font-size: 2rem;
+  }
+  
+  /* #message = message above the alphabet tiles that reads "correct" or "incorrect" when you guess a correct/incorrect letter */
+  #message {
+    min-height: 3em;
+  }
+  
+  /* #letter-container = container holding alphabet letters  */
+  
+  #letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    justify-content: center;
+  }
+  
+  #letter-container button {
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 0.3em;
+    cursor: pointer;
+    height: 2em;
+    width: 8.6%;
+    /* border: 1px solid fuchsia; */
+    font-size: 1.2rem;
+    margin: .5em 0;
+  }
+  
+  #letter-container .correct {
+    background-color: var(--correct);
+    color: #fff;
+    border: 2px solid var(--correct);
+  }
+  
+  #letter-container .incorrect {
+    background-color: var(--incorrect);
+    color: #fff;
+    border: 2px solid var(--incorrect);
+  }
+  
+  .hint-ref {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .hint-ref span {
+    font-weight: 600;
+  }
+  
+  #user-input-section-word {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+  
+  #user-input-section-word > * {
+    width: 0.9em;
+  }
+  
+  .question-no-container {
+    text-align: left;
+    margin-bottom: 0.2em;
+  }
+  
+  #user-input-section-chances {
+    text-align: left;
+  }
+  
+  .heart {
+    color: red;
+  }
+  
+  #word {
+    font-weight: 600;
+  }
+  
+  #word span {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0.5em;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  #result {
+    color: #fff;
+  }
+  
+  .voice-selection {
+    display: none;
+  }
+  
+  .glow {
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(145, 92, 182, 0.2);
+    box-shadow: 0 5px 25px rgba(145, 92, 182, 0.4);
+  }
+/* Keyboard letters */
+  /* #letter-container button {
+    width: 4.5vw;
+    font-size: 1.2rem;
+    margin: .5em 0.1em;
+      } */
+
+      /* #letter-container button {
+        width: 8.1vw;
+        font-size: 1.2rem;
+        margin: .5em 0;
+      } */
+
+      .attribution {
+        margin-top: 2rem;
+        display: block;
+        font-size: 0.7rem;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        top:0;
+        left: 10%;
+      }
+      
+      .attribution a{
+        color: inherit;
+      }
+      
+      .start-screen.attribution {
+        margin: 0 auto 1rem auto;
+        width: 80%;
+        text-align: center;
+      }
+  
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      padding: 1rem .2rem;
+    }
+    #chanceCount {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .heartSpan {
+      margin-top: 0.5em;
+    }
+
+  
+    #start,
+    .speak {
+      margin-top: 0;
+      line-height: 0.9;
+    }
+
+    #letter-container { 
+gap: 0.2rem;
+    }
+  }
+  
